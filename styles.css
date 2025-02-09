@@ -1,0 +1,114 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.info-text {
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    padding: 10px;
+    background-color: transparent; 
+    color: black;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    border-bottom: none;
+    margin: 0;
+}
+
+/* General button styling */
+button {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+button.solve {
+    background-color: #4CAF50;
+    color: white;
+}
+
+button.solve:hover:not(:disabled) {
+    background-color: #45a049;
+}
+
+button.clear {
+    background-color: #f44336;
+    color: white;
+}
+
+button.clear:hover:not(:disabled) {
+    background-color: #da190b;
+}
+
+button:disabled {
+    background-color: #ccc;
+    cursor: default;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center; /* Center buttons horizontally */
+    align-items: center; /* Align buttons vertically */
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%); /* Offset by 50% of the container width */
+    gap: 20px;
+}
+
+.sudoku-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sudoku-grid {
+    border-collapse: collapse;
+    border: 2px solid #000;
+}
+
+.sudoku-grid td {
+    width: 50px;
+    height: 50px;
+    border: 1px solid #000;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.sudoku-grid input {
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    background-color: transparent; 
+    color: black; 
+}
+
+/* Do not change the appearance of the input when disabled */
+.sudoku-grid input:disabled {
+    background-color: transparent;
+    color: inherit;
+}
+
+.sudoku-grid td:nth-child(3), .sudoku-grid td:nth-child(6), .sudoku-grid td:nth-child(9) {
+    border-right: 2px solid #000;
+}
+
+.sudoku-grid tr:nth-child(3), .sudoku-grid tr:nth-child(6), .sudoku-grid tr:nth-child(9) {
+    border-bottom: 2px solid #000;
+}
